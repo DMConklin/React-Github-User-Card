@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { UserCard, FollowerCard } from './components';
-import { AppDiv, FollowerDiv } from './components/styles';
+import { AppDiv, FollowersDiv } from './components/styles';
 
 class App extends React.Component {
 
@@ -39,9 +39,9 @@ class App extends React.Component {
     return (
         <AppDiv className="App">
           <UserCard user={this.state.user} />
-          <FollowerDiv>
+          <FollowersDiv>
             {this.state.followers.map(follower => <FollowerCard follower={follower} key={follower.node_id} />)}
-          </FollowerDiv>
+          </FollowersDiv>
         </AppDiv>
     );
   }
