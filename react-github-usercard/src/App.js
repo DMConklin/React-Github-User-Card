@@ -33,6 +33,7 @@ class App extends React.Component {
   componentDidMount = () => {
     this.Api('https://api.github.com/users/DMConklin', 'user', this.dataHandler);
     this.Api('https://api.github.com/users/DMConklin/followers', 'followers', this.dataHandler);
+
   }
 
   render() {
