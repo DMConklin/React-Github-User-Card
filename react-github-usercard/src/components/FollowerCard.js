@@ -1,11 +1,12 @@
 import React from 'react';
+import { FollowersDiv, FollowerName, FollowerAvatar } from './styles';
 
 const FollowerCard = (props) => {
     return(
-        <div>
-            <h2>{props.follower.login}</h2>
-            <img src={props.follower.avatar_url} alt="avatar" />
-        </div>
+        <FollowersDiv>
+            <FollowerName>{props.follower.login}</FollowerName>
+            <FollowerAvatar src={props.follower.avatar_url} alt="avatar" />
+        </FollowersDiv>
     )
 }
 

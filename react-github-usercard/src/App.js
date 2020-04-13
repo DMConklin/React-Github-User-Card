@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
 import { UserCard, FollowerCard } from './components';
+import { AppDiv, FollowerDiv } from './components/styles';
 
 class App extends React.Component {
 
   constructor() {
     super();
-    this.state= {
+    this.state = {
       user: {},
       followers: []
     }
@@ -36,10 +37,12 @@ class App extends React.Component {
 
   render() {
     return (
-        <div className="App">
+        <AppDiv className="App">
           <UserCard user={this.state.user} />
-          {this.state.followers.map(follower => <FollowerCard follower={follower} key={follower.node_id} />)}
-        </div>
+          <FollowerDiv>
+            {this.state.followers.map(follower => <FollowerCard follower={follower} key={follower.node_id} />)}
+          </FollowerDiv>
+        </AppDiv>
     );
   }
 }
